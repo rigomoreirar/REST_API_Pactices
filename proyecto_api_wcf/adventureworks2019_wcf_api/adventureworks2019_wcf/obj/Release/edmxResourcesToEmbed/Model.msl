@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AdventureWorks2019ModelStoreContainer" CdmEntityContainer="AdventureWorks2019Entities">
+    <FunctionImportMapping FunctionImportName="stpr_DepartmentList" FunctionName="AdventureWorks2019Model.Store.stpr_DepartmentList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AdventureWorks2019Model.stpr_DepartmentList_Result">
+          <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="stpr_DepartmentSave" FunctionName="AdventureWorks2019Model.Store.stpr_DepartmentSave">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AdventureWorks2019Model.stpr_DepartmentSave_Result">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="mensaje" ColumnName="mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="stpr_ProductCategoryList" FunctionName="AdventureWorks2019Model.Store.stpr_ProductCategoryList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AdventureWorks2019Model.stpr_ProductCategoryList_Result">
+          <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="stpr_ProductCategorySave" FunctionName="AdventureWorks2019Model.Store.stpr_ProductCategorySave">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AdventureWorks2019Model.stpr_ProductCategorySave_Result">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="mensaje" ColumnName="mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="stpr_CreditCardList" FunctionName="AdventureWorks2019Model.Store.stpr_CreditCardList">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AdventureWorks2019Model.stpr_CreditCardList_Result">
+          <ScalarProperty Name="CreditCardID" ColumnName="CreditCardID" />
+          <ScalarProperty Name="CardType" ColumnName="CardType" />
+          <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+          <ScalarProperty Name="ExpMonth" ColumnName="ExpMonth" />
+          <ScalarProperty Name="ExpYear" ColumnName="ExpYear" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="stpr_CreditCardSave" FunctionName="AdventureWorks2019Model.Store.stpr_CreditCardSave">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AdventureWorks2019Model.stpr_CreditCardSave_Result">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="mensaje" ColumnName="mensaje" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

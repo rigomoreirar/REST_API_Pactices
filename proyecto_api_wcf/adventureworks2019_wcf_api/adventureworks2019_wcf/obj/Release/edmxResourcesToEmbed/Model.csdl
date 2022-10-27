@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdventureWorks2019Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AdventureWorks2019Entities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="stpr_DepartmentList" ReturnType="Collection(AdventureWorks2019Model.stpr_DepartmentList_Result)" />
+    <FunctionImport Name="stpr_DepartmentSave" ReturnType="Collection(AdventureWorks2019Model.stpr_DepartmentSave_Result)">
+      <Parameter Name="DepartmentId" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Group" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="stpr_ProductCategoryList" ReturnType="Collection(AdventureWorks2019Model.stpr_ProductCategoryList_Result)" />
+    <FunctionImport Name="stpr_ProductCategorySave" ReturnType="Collection(AdventureWorks2019Model.stpr_ProductCategorySave_Result)">
+      <Parameter Name="ProductCategoryId" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="stpr_CreditCardList" ReturnType="Collection(AdventureWorks2019Model.stpr_CreditCardList_Result)" />
+    <FunctionImport Name="stpr_CreditCardSave" ReturnType="Collection(AdventureWorks2019Model.stpr_CreditCardSave_Result)">
+      <Parameter Name="CreditCardId" Mode="In" Type="Int32" />
+      <Parameter Name="CardType" Mode="In" Type="String" />
+      <Parameter Name="CardNumber" Mode="In" Type="String" />
+      <Parameter Name="ExpMonth" Mode="In" Type="Int32" />
+      <Parameter Name="ExpYear" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="stpr_DepartmentList_Result">
+    <Property Type="Int16" Name="DepartmentID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="GroupName" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="stpr_DepartmentSave_Result">
+    <Property Type="Int32" Name="estado" Nullable="true" />
+    <Property Type="String" Name="mensaje" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="stpr_ProductCategoryList_Result">
+    <Property Type="Int32" Name="ProductCategoryID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="stpr_ProductCategorySave_Result">
+    <Property Type="Int32" Name="estado" Nullable="true" />
+    <Property Type="String" Name="mensaje" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="stpr_CreditCardList_Result">
+    <Property Type="Int32" Name="CreditCardID" Nullable="false" />
+    <Property Type="String" Name="CardType" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="25" />
+    <Property Type="Byte" Name="ExpMonth" Nullable="false" />
+    <Property Type="Int16" Name="ExpYear" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="stpr_CreditCardSave_Result">
+    <Property Type="Int32" Name="estado" Nullable="true" />
+    <Property Type="String" Name="mensaje" Nullable="true" MaxLength="500" />
+  </ComplexType>
+</Schema>

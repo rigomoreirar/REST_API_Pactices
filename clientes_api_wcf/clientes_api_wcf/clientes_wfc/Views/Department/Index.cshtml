@@ -1,0 +1,43 @@
+﻿@model IEnumerable<clientes_wfc.ServiceReference1.stpr_DepartmentList_Result>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Department</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartmentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GroupName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { DepartmentID = item.DepartmentID }) 
+        </td>
+    </tr>
+}
+
+</table>

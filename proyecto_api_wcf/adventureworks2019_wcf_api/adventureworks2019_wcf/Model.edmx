@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AdventureWorks2019Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="stpr_DepartmentList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="HumanResources" />
+        <Function Name="stpr_DepartmentSave" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="HumanResources">
+          <Parameter Name="DepartmentId" Type="int" Mode="In" />
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="Group" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="stpr_ProductCategoryList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Production" />
+        <Function Name="stpr_ProductCategorySave" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Production">
+          <Parameter Name="ProductCategoryId" Type="int" Mode="In" />
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="stpr_CreditCardList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sales" />
+        <Function Name="stpr_CreditCardSave" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Sales">
+          <Parameter Name="CreditCardId" Type="int" Mode="In" />
+          <Parameter Name="CardType" Type="nvarchar" Mode="In" />
+          <Parameter Name="CardNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="ExpMonth" Type="int" Mode="In" />
+          <Parameter Name="ExpYear" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="AdventureWorks2019ModelStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AdventureWorks2019Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AdventureWorks2019Entities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="stpr_DepartmentList" ReturnType="Collection(AdventureWorks2019Model.stpr_DepartmentList_Result)" />
+          <FunctionImport Name="stpr_DepartmentSave" ReturnType="Collection(AdventureWorks2019Model.stpr_DepartmentSave_Result)">
+            <Parameter Name="DepartmentId" Mode="In" Type="Int32" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Group" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="stpr_ProductCategoryList" ReturnType="Collection(AdventureWorks2019Model.stpr_ProductCategoryList_Result)" />
+          <FunctionImport Name="stpr_ProductCategorySave" ReturnType="Collection(AdventureWorks2019Model.stpr_ProductCategorySave_Result)">
+            <Parameter Name="ProductCategoryId" Mode="In" Type="Int32" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="stpr_CreditCardList" ReturnType="Collection(AdventureWorks2019Model.stpr_CreditCardList_Result)" />
+          <FunctionImport Name="stpr_CreditCardSave" ReturnType="Collection(AdventureWorks2019Model.stpr_CreditCardSave_Result)">
+            <Parameter Name="CreditCardId" Mode="In" Type="Int32" />
+            <Parameter Name="CardType" Mode="In" Type="String" />
+            <Parameter Name="CardNumber" Mode="In" Type="String" />
+            <Parameter Name="ExpMonth" Mode="In" Type="Int32" />
+            <Parameter Name="ExpYear" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="stpr_DepartmentList_Result">
+          <Property Type="Int16" Name="DepartmentID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="GroupName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="stpr_DepartmentSave_Result">
+          <Property Type="Int32" Name="estado" Nullable="true" />
+          <Property Type="String" Name="mensaje" Nullable="true" MaxLength="500" />
+        </ComplexType>
+        <ComplexType Name="stpr_ProductCategoryList_Result">
+          <Property Type="Int32" Name="ProductCategoryID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="stpr_ProductCategorySave_Result">
+          <Property Type="Int32" Name="estado" Nullable="true" />
+          <Property Type="String" Name="mensaje" Nullable="true" MaxLength="500" />
+        </ComplexType>
+        <ComplexType Name="stpr_CreditCardList_Result">
+          <Property Type="Int32" Name="CreditCardID" Nullable="false" />
+          <Property Type="String" Name="CardType" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="CardNumber" Nullable="false" MaxLength="25" />
+          <Property Type="Byte" Name="ExpMonth" Nullable="false" />
+          <Property Type="Int16" Name="ExpYear" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="stpr_CreditCardSave_Result">
+          <Property Type="Int32" Name="estado" Nullable="true" />
+          <Property Type="String" Name="mensaje" Nullable="true" MaxLength="500" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AdventureWorks2019ModelStoreContainer" CdmEntityContainer="AdventureWorks2019Entities" >
+          <FunctionImportMapping FunctionImportName="stpr_DepartmentList" FunctionName="AdventureWorks2019Model.Store.stpr_DepartmentList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AdventureWorks2019Model.stpr_DepartmentList_Result">
+                <ScalarProperty Name="DepartmentID" ColumnName="DepartmentID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="stpr_DepartmentSave" FunctionName="AdventureWorks2019Model.Store.stpr_DepartmentSave">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AdventureWorks2019Model.stpr_DepartmentSave_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="mensaje" ColumnName="mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="stpr_ProductCategoryList" FunctionName="AdventureWorks2019Model.Store.stpr_ProductCategoryList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AdventureWorks2019Model.stpr_ProductCategoryList_Result">
+                <ScalarProperty Name="ProductCategoryID" ColumnName="ProductCategoryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="stpr_ProductCategorySave" FunctionName="AdventureWorks2019Model.Store.stpr_ProductCategorySave">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AdventureWorks2019Model.stpr_ProductCategorySave_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="mensaje" ColumnName="mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="stpr_CreditCardList" FunctionName="AdventureWorks2019Model.Store.stpr_CreditCardList">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AdventureWorks2019Model.stpr_CreditCardList_Result">
+                <ScalarProperty Name="CreditCardID" ColumnName="CreditCardID" />
+                <ScalarProperty Name="CardType" ColumnName="CardType" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+                <ScalarProperty Name="ExpMonth" ColumnName="ExpMonth" />
+                <ScalarProperty Name="ExpYear" ColumnName="ExpYear" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="stpr_CreditCardSave" FunctionName="AdventureWorks2019Model.Store.stpr_CreditCardSave">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AdventureWorks2019Model.stpr_CreditCardSave_Result">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="mensaje" ColumnName="mensaje" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
