@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\WCF\adventureworks2019_wcf</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/adventureworks2019_wcf.dll">
+      <publishTime>10/26/2022 23:44:14</publishTime>
+    </File>
+    <File Include="bin/adventureworks2019_wcf.pdb">
+      <publishTime>10/26/2022 23:44:14</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/23/2017 13:15:18</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/23/2017 13:15:20</publishTime>
+    </File>
+    <File Include="Model.edmx.diagram">
+      <publishTime>10/26/2022 12:24:57</publishTime>
+    </File>
+    <File Include="Service1.svc">
+      <publishTime>10/26/2022 12:02:58</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/26/2022 17:06:07</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

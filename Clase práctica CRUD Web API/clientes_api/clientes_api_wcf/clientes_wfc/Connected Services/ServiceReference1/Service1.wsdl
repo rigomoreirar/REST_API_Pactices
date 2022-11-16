@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8086/adventureworks2019_wcf/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8086/adventureworks2019_wcf/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8086/adventureworks2019_wcf/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/adventureworks2019_wcf" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_DepartmentLista_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepartmentLista" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DepartmentLista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepartmentListaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DepartmentDatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepartmentDatos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DepartmentDatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepartmentDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DepartmentSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:DepartmentSave" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DepartmentSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DepartmentSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreditCardLista_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreditCardLista" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreditCardLista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreditCardListaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreditCardDatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreditCardDatos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreditCardDatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreditCardDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreditCardSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreditCardSave" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreditCardSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreditCardSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProductCategoryLista_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductCategoryLista" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProductCategoryLista_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductCategoryListaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProductCategoryDatos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductCategoryDatos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProductCategoryDatos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductCategoryDatosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProductCategorySave_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductCategorySave" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ProductCategorySave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductCategorySaveResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="DepartmentLista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DepartmentLista" message="tns:IService1_DepartmentLista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DepartmentListaResponse" message="tns:IService1_DepartmentLista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepartmentDatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DepartmentDatos" message="tns:IService1_DepartmentDatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DepartmentDatosResponse" message="tns:IService1_DepartmentDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DepartmentSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DepartmentSave" message="tns:IService1_DepartmentSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DepartmentSaveResponse" message="tns:IService1_DepartmentSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditCardLista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreditCardLista" message="tns:IService1_CreditCardLista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreditCardListaResponse" message="tns:IService1_CreditCardLista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditCardDatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreditCardDatos" message="tns:IService1_CreditCardDatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreditCardDatosResponse" message="tns:IService1_CreditCardDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreditCardSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreditCardSave" message="tns:IService1_CreditCardSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreditCardSaveResponse" message="tns:IService1_CreditCardSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductCategoryLista">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ProductCategoryLista" message="tns:IService1_ProductCategoryLista_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ProductCategoryListaResponse" message="tns:IService1_ProductCategoryLista_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductCategoryDatos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ProductCategoryDatos" message="tns:IService1_ProductCategoryDatos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ProductCategoryDatosResponse" message="tns:IService1_ProductCategoryDatos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductCategorySave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ProductCategorySave" message="tns:IService1_ProductCategorySave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ProductCategorySaveResponse" message="tns:IService1_ProductCategorySave_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DepartmentLista">
+      <soap:operation soapAction="http://tempuri.org/IService1/DepartmentLista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepartmentDatos">
+      <soap:operation soapAction="http://tempuri.org/IService1/DepartmentDatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepartmentSave">
+      <soap:operation soapAction="http://tempuri.org/IService1/DepartmentSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditCardLista">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreditCardLista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditCardDatos">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreditCardDatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreditCardSave">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreditCardSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductCategoryLista">
+      <soap:operation soapAction="http://tempuri.org/IService1/ProductCategoryLista" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductCategoryDatos">
+      <soap:operation soapAction="http://tempuri.org/IService1/ProductCategoryDatos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductCategorySave">
+      <soap:operation soapAction="http://tempuri.org/IService1/ProductCategorySave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:8086/adventureworks2019_wcf/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

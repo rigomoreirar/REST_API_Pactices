@@ -1,0 +1,12 @@
+C:\Users\rigom\source\repos\adventureworks2019_wcf_api\adventureworks2019_wcf\bin\adventureworks2019_wcf.dll.config
+C:\Users\rigom\source\repos\adventureworks2019_wcf_api\adventureworks2019_wcf\bin\adventureworks2019_wcf.dll
+C:\Users\rigom\source\repos\adventureworks2019_wcf_api\adventureworks2019_wcf\bin\adventureworks2019_wcf.pdb
+C:\Users\rigom\source\repos\adventureworks2019_wcf_api\adventureworks2019_wcf\bin\EntityFramework.dll
+C:\Users\rigom\source\repos\adventureworks2019_wcf_api\adventureworks2019_wcf\bin\EntityFramework.SqlServer.dll
+C:\Users\rigom\source\repos\adventureworks2019_wcf_api\adventureworks2019_wcf\bin\EntityFramework.xml
+C:\Users\rigom\source\repos\adventureworks2019_wcf_api\adventureworks2019_wcf\bin\EntityFramework.SqlServer.xml
+C:\Users\rigom\source\repos\adventureworks2019_wcf_api\adventureworks2019_wcf\obj\Debug\adventureworks2019_wcf.csproj.AssemblyReference.cache
+C:\Users\rigom\source\repos\adventureworks2019_wcf_api\adventureworks2019_wcf\obj\Debug\adventureworks2019_wcf.csproj.CoreCompileInputs.cache
+C:\Users\rigom\source\repos\adventureworks2019_wcf_api\adventureworks2019_wcf\obj\Debug\adventureworks2019_wcf.csproj.CopyComplete
+C:\Users\rigom\source\repos\adventureworks2019_wcf_api\adventureworks2019_wcf\obj\Debug\adventureworks2019_wcf.dll
+C:\Users\rigom\source\repos\adventureworks2019_wcf_api\adventureworks2019_wcf\obj\Debug\adventureworks2019_wcf.pdb

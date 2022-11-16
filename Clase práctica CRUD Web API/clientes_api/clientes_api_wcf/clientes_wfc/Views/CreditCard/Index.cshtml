@@ -1,0 +1,55 @@
+﻿@model IEnumerable<clientes_wfc.ServiceReference1.stpr_CreditCardList_Result>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>CreditCard</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CreditCardID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CardNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpMonth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpYear)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreditCardID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CardNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpMonth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpYear)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { CreditCardID = item.CreditCardID }) 
+        </td>
+    </tr>
+}
+
+</table>
